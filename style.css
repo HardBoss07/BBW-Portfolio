@@ -38,10 +38,44 @@ header nav a:hover {
 
 /* Main section */
 main {
-    max-width: 800px;
+    max-width: 60%;
     margin: 2rem auto;
     padding: 1rem;
 }
+
+.ergebnis {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ergebnis h3, .ergebnis p {
+    margin-bottom: 1rem;
+}
+
+.ergebnis > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.ergebnis > div img {
+    width: 300px;  /* Einheitliche Breite für alle Bilder */
+    height: auto;  /* Höhe wird proportional angepasst */
+    object-fit: cover;  /* Bild skaliert, um den Container ohne Verzerrung zu füllen */
+}
+
+@media (max-width: 768px) {
+    .ergebnis > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ergebnis > div img {
+        width: 80%; /* Bei kleineren Geräten passt sich die Breite des Bildes an */
+    }
+}
+
 
 .intro {
     text-align: center;
