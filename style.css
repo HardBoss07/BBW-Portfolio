@@ -108,6 +108,17 @@ main {
     color: #333;
 }
 
+.git-btn {
+    text-align: center;
+    background: linear-gradient(90deg, #fc25ee ,#7425fc);
+    padding: 1rem 0;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 10rem;
+}
+
 /* Footer styling */
 footer {
     text-align: center;
