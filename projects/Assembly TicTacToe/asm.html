@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly Tic Tac Toe</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <h1>Assembly Tic Tac Toe</h1>
+    <nav>
+        <a href="../projects.html">Zurück zu Projekte</a>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Über Assembly Tic Tac Toe</h2>
+        <p>
+            Um meine Assembly Künste zu verbessern, habe ich mir als Ziel gesetzt Tic Tac Toe in Assembly zu schreiben.
+            Ich nutze den emu8086 Emulator um meinen Assembly Code zu testen. Dieses Projekt hat mir sehr geholfen,
+            mit mit der internen Struktur einer CPU tiefer zu beschäftigen. Ich habe gelernt, wie man Methoden und Loops
+            in Assembly nutzt, wie man besser User-Inputs verarbeitet und Error-Handling in Assembly.
+        </p>
+        <div class="ergebnis">
+            <h2>Meine Ergebnisse:</h2>
+            <a class="git-btn" href="https://github.com/HardBoss07/assembly-tic-tac-toe">⇱ Github Repository</a>
+            <div>
+                <div>
+                    <h3>Video Demonstration</h3>
+                    <p>
+                        Hier ist eine Video Demonstration von einer Runde Tic Tac Toe:
+                    </p>
+                </div>
+                <video width="320" height="180" controls>
+                    <source src="vid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <div>
+                    <h3>Initialisierung</h3>
+                    <p>
+                        Hier ist meine INIT Methode. Diese Methode setzt Variabeln, sodass das Spiel schlussendlich
+                        fehlerfrei starten kann:
+                    </p>
+                </div>
+                <img src="asm2.png" alt="Assembly Initialisierung">
+            </div>
+            <div>
+                <div>
+                    <h3>Regeln überprüfen</h3>
+                    <p>
+                        Hier ist ein Ausschnitt meiner CHECK Methode. Diese Methode überprüft alle 8 Kombinationen,
+                        die zu einem Sieg führen:
+                    </p>
+                </div>
+                <img src="asm1.png" alt="Assembly Regeln überprüfen">
+            </div>
+            <div>
+                <div>
+                    <h3>Umgehen mit invaliden Inputs</h3>
+                    <p>
+                        Hier ist meine TAKEN Methode. Diese Methode überprüft ob ein Input eines Spielers valid ist und
+                        wenn dies nicht der Fall ist, überschreibt die Methode den Input mit einer leeren Zeile:
+                    </p>
+                </div>
+                <img src="asm3.png" alt="Assembly Umgehen mit invaliden Inputs">
+            </div>
+            <p>Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
+        </div>
+
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 - Matteo Bosshard</p>
+</footer>
+</body>
+</html>
