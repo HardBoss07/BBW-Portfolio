@@ -19,7 +19,7 @@ const translations = {
         hamsterLink: "Mehr erfahren",
         jokemonTitle: "Jokemon Projekt",
         jokemonLink: "Mehr erfahren",
-        footer: "&copy; 2024 - Matteo Bosshard"
+        footer: "&copy; 2025 - Matteo Bosshard"
     },
     en: {
         title: "My Portfolio",
@@ -39,7 +39,7 @@ const translations = {
         hamsterLink: "Learn More",
         jokemonTitle: "Jokemon Project",
         jokemonLink: "Learn More",
-        footer: "&copy; 2024 - Matteo Bosshard"
+        footer: "&copy; 2025 - Matteo Bosshard"
     }
 };
 
