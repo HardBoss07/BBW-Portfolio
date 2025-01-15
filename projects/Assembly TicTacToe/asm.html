@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assembly Tic Tac Toe</title>
+    <title id="tic-tac-toe-title">Assembly Tic Tac Toe</title>
     <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
 </head>
 <body>
 <header>
-    <h1>Assembly Tic Tac Toe</h1>
+    <h1 id="tic-tac-toe-header">Assembly Tic Tac Toe</h1>
     <nav>
-        <a href="../projects.html">Zurück zu Projekte</a>
+        <a href="../projects.html" id="back-to-projects-link">Zurück zu Projekte</a>
+        <select id="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
     </nav>
 </header>
 <main>
     <section>
-        <h2>Über Assembly Tic Tac Toe</h2>
-        <p>
+        <h2 id="about-tic-tac-toe-title">Über Assembly Tic Tac Toe</h2>
+        <p id="about-tic-tac-toe-text">
             Um meine Assembly Künste zu verbessern, habe ich mir als Ziel gesetzt Tic Tac Toe in Assembly zu schreiben.
             Ich nutze den emu8086 Emulator um meinen Assembly Code zu testen. Dieses Projekt hat mir sehr geholfen,
             mit mit der internen Struktur einer CPU tiefer zu beschäftigen. Ich habe gelernt, wie man Methoden und Loops
             in Assembly nutzt, wie man besser User-Inputs verarbeitet und Error-Handling in Assembly.
         </p>
         <div class="ergebnis">
-            <h2>Meine Ergebnisse:</h2>
-            <a class="git-btn" href="https://github.com/HardBoss07/assembly-tic-tac-toe">⇱ Github Repository</a>
+            <h2 id="results-title">Meine Ergebnisse:</h2>
+            <a class="git-btn" href="https://github.com/HardBoss07/assembly-tic-tac-toe" id="github-repo-link">⇱ Github Repository</a>
             <div>
                 <div>
-                    <h3>Video Demonstration</h3>
-                    <p>
+                    <h3 id="video-demo-title">Video Demonstration</h3>
+                    <p id="video-demo-text">
                         Hier ist eine Video Demonstration von einer Runde Tic Tac Toe:
                     </p>
                 </div>
@@ -38,8 +43,8 @@
             </div>
             <div>
                 <div>
-                    <h3>Initialisierung</h3>
-                    <p>
+                    <h3 id="init-title">Initialisierung</h3>
+                    <p id="init-text">
                         Hier ist meine INIT Methode. Diese Methode setzt Variabeln, sodass das Spiel schlussendlich
                         fehlerfrei starten kann:
                     </p>
@@ -48,8 +53,8 @@
             </div>
             <div>
                 <div>
-                    <h3>Regeln überprüfen</h3>
-                    <p>
+                    <h3 id="check-title">Regeln überprüfen</h3>
+                    <p id="check-text">
                         Hier ist ein Ausschnitt meiner CHECK Methode. Diese Methode überprüft alle 8 Kombinationen,
                         die zu einem Sieg führen:
                     </p>
@@ -58,21 +63,20 @@
             </div>
             <div>
                 <div>
-                    <h3>Umgehen mit invaliden Inputs</h3>
-                    <p>
+                    <h3 id="invalid-input-title">Umgehen mit invaliden Inputs</h3>
+                    <p id="invalid-input-text">
                         Hier ist meine TAKEN Methode. Diese Methode überprüft ob ein Input eines Spielers valid ist und
                         wenn dies nicht der Fall ist, überschreibt die Methode den Input mit einer leeren Zeile:
                     </p>
                 </div>
                 <img src="asm3.png" alt="Assembly Umgehen mit invaliden Inputs">
             </div>
-            <p>Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
+            <p id="more-info-text">Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
         </div>
-
     </section>
 </main>
 <footer>
-    <p>&copy; 2025 - Matteo Bosshard</p>
+    <p id="footer">&copy; 2025 - Matteo Bosshard</p>
 </footer>
 </body>
 </html>

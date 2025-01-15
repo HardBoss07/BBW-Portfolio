@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assembly Tutorial</title>
+    <title id="assembly-title">Assembly Tutorial</title>
     <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
 </head>
 <body>
 <header>
-    <h1>Assembly Tutorial</h1>
+    <h1 id="assembly-header">Assembly Tutorial</h1>
     <nav>
-        <a href="../projects.html">Zurück zu Projekte</a>
+        <a href="../projects.html" id="back-to-projects-link">Zurück zu Projekte</a>
+        <select id="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
     </nav>
 </header>
 <main>
     <section>
-        <h2>Über das Assembly Tutorial</h2>
-        <p>
+        <h2 id="about-assembly-title">Über das Assembly Tutorial</h2>
+        <p id="about-assembly-text">
             Dieses Projekt habe ich mehr als Spass gestartet. Jedoch habe ich doch ein Ziel. Mein Ziel mit Assembly
             ist es, ein genaues Verständnis von den tief liegenden Operationen von einem Programm und genauer
             Memory-Allocation innerhalb der CPU zu lernen. Ich nutze den emu8086 Emulator und fokussiere mich
             zunächst auf die MSDOS-Assembly Programmierung.
         </p>
         <div class="ergebnis">
-            <h2>Meine Ergebnisse:</h2>
-            <a class="git-btn" href="https://github.com/HardBoss07/assembly-introduction">⇱ Github Repository</a>
+            <h2 id="results-title">Meine Ergebnisse:</h2>
+            <a class="git-btn" href="https://github.com/HardBoss07/assembly-introduction" id="github-repo-link">⇱ Github Repository</a>
             <div>
                 <div>
-                    <h3>Hello World in Assembly</h3>
-                    <p>
+                    <h3 id="hello-world-title">Hello World in Assembly</h3>
+                    <p id="hello-world-text">
                         Hier habe ich ein kleines Programm geschrieben, das "Hello World" in der Console ausgibt:
                     </p>
                 </div>
@@ -36,21 +41,21 @@
             </div>
             <div>
                 <div>
-                    <h3>2 Zahlen addieren</h3>
-                    <p>
+                    <h3 id="add-numbers-title">2 Zahlen addieren</h3>
+                    <p id="add-numbers-text">
                         Hier habe ich ein Programm, das den Nutzer nach 2 Zahlen fragt und diese danach addiert.
                         Dies ist nur ein Teil des Source Codes, den Rest kann man auf dem GitHub Repository finden:
                     </p>
                 </div>
                 <img src="asm2.png" alt="Assembly 2 Zahlen addieren">
             </div>
-            <p>Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
+            <p id="more-info-text">Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
         </div>
 
     </section>
 </main>
 <footer>
-    <p>&copy; 2025 - Matteo Bosshard</p>
+    <p id="footer">&copy; 2025 - Matteo Bosshard</p>
 </footer>
 </body>
 </html>
