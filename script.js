@@ -1,5 +1,3 @@
-// Updated script.js
-
 const translations = {
     de: {
         title: "Mein Portfolio",
@@ -189,18 +187,22 @@ function changeLanguage(lang) {
 
     // Update common elements
     document.title = t.title;
-    const projectsTitle = document.getElementById("projects-title");
-    if (projectsTitle) projectsTitle.textContent = t.projectsTitle;
 
-    const homeLink = document.getElementById("home-link");
-    if (homeLink) homeLink.textContent = t.home;
+    const elementsToUpdate = [
+        { id: "projects-title", text: t.projectsTitle },
+        { id: "home-link", text: t.home },
+        { id: "my-own-projects-title", text: t.myOwnProjects },
+        { id: "bbw-projects-title", text: t.bbwProjects },
+        { id: "footer", html: t.footer },
+    ];
 
-    // Update project section titles
-    const myOwnProjectsTitle = document.getElementById("my-own-projects-title");
-    if (myOwnProjectsTitle) myOwnProjectsTitle.textContent = t.myOwnProjects;
-
-    const bbwProjectsTitle = document.getElementById("bbw-projects-title");
-    if (bbwProjectsTitle) bbwProjectsTitle.textContent = t.bbwProjects;
+    elementsToUpdate.forEach(({ id, text, html }) => {
+        const element = document.getElementById(id);
+        if (element) {
+            if (text) element.textContent = text;
+            if (html) element.innerHTML = html;
+        }
+    });
 
     // Update project cards
     const projectIds = ["calc", "tdl", "tictactoe", "asm", "hamster", "jokemon"];
@@ -211,167 +213,66 @@ function changeLanguage(lang) {
         if (linkElem) linkElem.textContent = t[`${id}Link`];
     });
 
-    // Update footer
-    const footer = document.getElementById("footer");
-    if (footer) footer.innerHTML = t.footer;
+    // Update other elements in groups
+    const updateGroups = [
+        {
+            ids: [
+                "assembly-title", "assembly-header", "back-to-projects-link",
+                "about-assembly-title", "about-assembly-text", "results-title",
+                "github-repo-link", "hello-world-title", "hello-world-text",
+                "add-numbers-title", "add-numbers-text", "more-info-text"
+            ],
+            prefix: "assembly"
+        },
+        {
+            ids: [
+                "tic-tac-toe-title", "tic-tac-toe-header", "about-tic-tac-toe-title",
+                "about-tic-tac-toe-text", "video-demo-title", "video-demo-text",
+                "init-title", "init-text", "check-title", "check-text",
+                "invalid-input-title", "invalid-input-text", "more-info-text"
+            ],
+            prefix: "ticTacToe"
+        },
+        {
+            ids: [
+                "hamster-title", "hamster-header", "about-hamster-title",
+                "about-hamster-text", "pap-title", "pap-text",
+                "struktogramm-title", "struktogramm-text", "java-title", "java-text"
+            ],
+            prefix: "hamster"
+        },
+        {
+            ids: [
+                "calculator-title", "calculator-header", "about-calculator-title",
+                "about-calculator-text", "hello-class-title", "hello-class-text",
+                "calculator-class-title", "calculator-class-text", "download-link"
+            ],
+            prefix: "calculator"
+        },
+        {
+            ids: [
+                "project-title", "project-header", "back-to-projects-link",
+                "about-project-title", "about-project-text", "environment-title",
+                "environment-text", "objects-title", "objects-text", "maps-title",
+                "maps-text", "evolution-title", "evolution-text", "savegame-title",
+                "savegame-text", "results-title", "github-repo-link",
+                "map-screenshot-title", "map-screenshot-text", "gamestate-class-title",
+                "gamestate-class-text", "building-class-title", "building-class-text"
+            ],
+            prefix: "project"
+        }
+    ];
 
-    document.documentElement.lang = lang;
-
-    // Update Assembly Tutorial Page Elements
-    const assemblyTitle = document.getElementById("assembly-title");
-    const assemblyHeader = document.getElementById("assembly-header");
-    const backToProjectsLink = document.getElementById("back-to-projects-link");
-    const aboutAssemblyTitle = document.getElementById("about-assembly-title");
-    const aboutAssemblyText = document.getElementById("about-assembly-text");
-    const resultsTitle = document.getElementById("results-title");
-    const githubRepoLink = document.getElementById("github-repo-link");
-    const helloWorldTitle = document.getElementById("hello-world-title");
-    const helloWorldText = document.getElementById("hello-world-text");
-    const addNumbersTitle = document.getElementById("add-numbers-title");
-    const addNumbersText = document.getElementById("add-numbers-text");
-    const moreInfoText = document.getElementById("more-info-text");
-
-    if (assemblyTitle) assemblyTitle.textContent = t.assemblyTitle;
-    if (assemblyHeader) assemblyHeader.textContent = t.assemblyHeader;
-    if (backToProjectsLink) backToProjectsLink.textContent = t.backToProjectsLink;
-    if (aboutAssemblyTitle) aboutAssemblyTitle.textContent = t.aboutAssemblyTitle;
-    if (aboutAssemblyText) aboutAssemblyText.textContent = t.aboutAssemblyText;
-    if (resultsTitle) resultsTitle.textContent = t.resultsTitle;
-    if (githubRepoLink) githubRepoLink.textContent = t.githubRepoLink;
-    if (helloWorldTitle) helloWorldTitle.textContent = t.helloWorldTitle;
-    if (helloWorldText) helloWorldText.textContent = t.helloWorldText;
-    if (addNumbersTitle) addNumbersTitle.textContent = t.addNumbersTitle;
-    if (addNumbersText) addNumbersText.textContent = t.addNumbersText;
-    if (moreInfoText) moreInfoText.textContent = t.moreInfoText;
-    if (footer) footer.innerHTML = t.footer;
-
-    const ticTacToeTitle = document.getElementById("tic-tac-toe-title");
-    const ticTacToeHeader = document.getElementById("tic-tac-toe-header");
-    const aboutTicTacToeTitle = document.getElementById("about-tic-tac-toe-title");
-    const aboutTicTacToeText = document.getElementById("about-tic-tac-toe-text");
-    const videoDemoTitle = document.getElementById("video-demo-title");
-    const videoDemoText = document.getElementById("video-demo-text");
-    const initTitle = document.getElementById("init-title");
-    const initText = document.getElementById("init-text");
-    const checkTitle = document.getElementById("check-title");
-    const checkText = document.getElementById("check-text");
-    const invalidInputTitle = document.getElementById("invalid-input-title");
-    const invalidInputText = document.getElementById("invalid-input-text");
-
-    if (ticTacToeTitle) ticTacToeTitle.textContent = t.ticTacToeTitle;
-    if (ticTacToeHeader) ticTacToeHeader.textContent = t.ticTacToeHeader;
-    if (backToProjectsLink) backToProjectsLink.textContent = t.backToProjectsLink;
-    if (aboutTicTacToeTitle) aboutTicTacToeTitle.textContent = t.aboutTicTacToeTitle;
-    if (aboutTicTacToeText) aboutTicTacToeText.textContent = t.aboutTicTacToeText;
-    if (resultsTitle) resultsTitle.textContent = t.resultsTitle;
-    if (githubRepoLink) githubRepoLink.textContent = t.githubRepoLink;
-    if (videoDemoTitle) videoDemoTitle.textContent = t.videoDemoTitle;
-    if (videoDemoText) videoDemoText.textContent = t.videoDemoText;
-    if (initTitle) initTitle.textContent = t.initTitle;
-    if (initText) initText.textContent = t.initText;
-    if (checkTitle) checkTitle.textContent = t.checkTitle;
-    if (checkText) checkText.textContent = t.checkText;
-    if (invalidInputTitle) invalidInputTitle.textContent = t.invalidInputTitle;
-    if (invalidInputText) invalidInputText.textContent = t.invalidInputText;
-    if (moreInfoText) moreInfoText.textContent = t.moreInfoText;
-
-    const hamsterTitle = document.getElementById("hamster-title");
-    const hamsterHeader = document.getElementById("hamster-header");
-    const aboutHamsterTitle = document.getElementById("about-hamster-title");
-    const aboutHamsterText = document.getElementById("about-hamster-text");
-    const papTitle = document.getElementById("pap-title");
-    const papText = document.getElementById("pap-text");
-    const struktogrammTitle = document.getElementById("struktogramm-title");
-    const struktogrammText = document.getElementById("struktogramm-text");
-    const javaTitle = document.getElementById("java-title");
-    const javaText = document.getElementById("java-text");
-
-    if (hamsterTitle) hamsterTitle.textContent = t.hamsterTitle;
-    if (hamsterHeader) hamsterHeader.textContent = t.hamsterHeader;
-    if (backToProjectsLink) backToProjectsLink.textContent = t.backToProjectsLink;
-    if (aboutHamsterTitle) aboutHamsterTitle.textContent = t.aboutHamsterTitle;
-    if (aboutHamsterText) aboutHamsterText.textContent = t.aboutHamsterText;
-    if (resultsTitle) resultsTitle.textContent = t.resultsTitle;
-    if (papTitle) papTitle.textContent = t.papTitle;
-    if (papText) papText.textContent = t.papText;
-    if (struktogrammTitle) struktogrammTitle.textContent = t.struktogrammTitle;
-    if (struktogrammText) struktogrammText.textContent = t.struktogrammText;
-    if (javaTitle) javaTitle.textContent = t.javaTitle;
-    if (javaText) javaText.textContent = t.javaText;
-    if (footer) footer.innerHTML = t.footer;
-
-    const calculatorTitle = document.getElementById("calculator-title");
-    const calculatorHeader = document.getElementById("calculator-header");
-    const aboutCalculatorTitle = document.getElementById("about-calculator-title");
-    const aboutCalculatorText = document.getElementById("about-calculator-text");
-    const helloClassTitle = document.getElementById("hello-class-title");
-    const helloClassText = document.getElementById("hello-class-text");
-    const calculatorClassTitle = document.getElementById("calculator-class-title");
-    const calculatorClassText = document.getElementById("calculator-class-text");
-    const downloadLink = document.getElementById("download-link");
-
-    if (calculatorTitle) calculatorTitle.textContent = t.calculatorTitle;
-    if (calculatorHeader) calculatorHeader.textContent = t.calculatorHeader;
-    if (backToProjectsLink) backToProjectsLink.textContent = t.backToProjectsLink;
-    if (aboutCalculatorTitle) aboutCalculatorTitle.textContent = t.aboutCalculatorTitle;
-    if (aboutCalculatorText) aboutCalculatorText.textContent = t.aboutCalculatorText;
-    if (resultsTitle) resultsTitle.textContent = t.resultsTitle;
-    if (githubRepoLink) githubRepoLink.textContent = t.githubRepoLink;
-    if (videoDemoTitle) videoDemoTitle.textContent = t.videoDemoTitle;
-    if (videoDemoText) videoDemoText.textContent = t.videoDemoText;
-    if (helloClassTitle) helloClassTitle.textContent = t.helloClassTitle;
-    if (helloClassText) helloClassText.textContent = t.helloClassText;
-    if (calculatorClassTitle) calculatorClassTitle.textContent = t.calculatorClassTitle;
-    if (calculatorClassText) calculatorClassText.textContent = t.calculatorClassText;
-    if (moreInfoText) moreInfoText.textContent = t.moreInfoText;
-    if (downloadLink) downloadLink.textContent = t.downloadLink;
-    if (footer) footer.innerHTML = t.footer;
-
-    document.getElementById("project-title").textContent = t.projectTitle;
-    document.getElementById("project-header").textContent = t.projectHeader;
-    document.getElementById("back-to-projects-link").textContent = t.backToProjectsLink;
-    document.getElementById("about-project-title").textContent = t.aboutProjectTitle;
-    document.getElementById("about-project-text").textContent = t.aboutProjectText;
-    document.getElementById("environment-title").textContent = t.environmentTitle;
-    document.getElementById("environment-text").textContent = t.environmentText;
-    document.getElementById("objects-title").textContent = t.objectsTitle;
-    document.getElementById("objects-text").textContent = t.objectsText;
-    document.getElementById("maps-title").textContent = t.mapsTitle;
-    document.getElementById("maps-text").textContent = t.mapsText;
-    document.getElementById("evolution-title").textContent = t.evolutionTitle;
-    document.getElementById("evolution-text").textContent = t.evolutionText;
-    document.getElementById("savegame-title").textContent = t.savegameTitle;
-    document.getElementById("savegame-text").textContent = t.savegameText;
-    document.getElementById("results-title").textContent = t.resultsTitle;
-    document.getElementById("github-repo-link").textContent = t.githubRepoLink;
-    document.getElementById("map-screenshot-title").textContent = t.mapScreenshotTitle;
-    document.getElementById("map-screenshot-text").textContent = t.mapScreenshotText;
-    document.getElementById("gamestate-class-title").textContent = t.gamestateClassTitle;
-    document.getElementById("gamestate-class-text").textContent = t.gamestateClassText;
-    document.getElementById("building-class-title").textContent = t.buildingClassTitle;
-    document.getElementById("building-class-text").textContent = t.buildingClassText;
-    document.getElementById("footer").textContent = t.footer;
-
-    document.getElementById("project-header").textContent = t.projectHeader;
-    document.getElementById("back-to-projects-link").textContent = t.backToProjectsLink;
-    document.getElementById("about-project-title").textContent = t.aboutProjectTitle;
-    document.getElementById("about-project-text").textContent = t.aboutProjectText;
-    document.getElementById("results-title").textContent = t.resultsTitle;
-    document.getElementById("github-repo-link").textContent = t.githubRepoLink;
-    document.getElementById("video-demo-title").textContent = t.videoDemoTitle;
-    document.getElementById("video-demo-text").textContent = t.videoDemoText;
-    document.getElementById("helloapplication-title").textContent = t.helloapplicationTitle;
-    document.getElementById("helloapplication-text").textContent = t.helloapplicationText;
-    document.getElementById("savesystem-title").textContent = t.savesystemTitle;
-    document.getElementById("savesystem-text").textContent = t.savesystemText;
-    document.getElementById("todolist-title").textContent = t.todolistTitle;
-    document.getElementById("todolist-text").textContent = t.todolistText;
-    document.getElementById("json-file-title").textContent = t.jsonFileTitle;
-    document.getElementById("json-file-text").textContent = t.jsonFileText;
-    document.getElementById("more-info-text").textContent = t.moreInfoText;
-    document.getElementById("download-link").textContent = t.downloadLink;
-    document.getElementById("footer").textContent = t.footer;
+    updateGroups.forEach(({ ids, prefix }) => {
+        ids.forEach(id => {
+            const element = document.getElementById(id);
+            if (element && t[`${id.replace(/-/g, '')}`]) {
+                element.textContent = t[`${id.replace(/-/g, '')}`];
+            }
+        });
+    });
 }
+
 
 // Event listener for the language selector
 document.addEventListener("DOMContentLoaded", () => {
