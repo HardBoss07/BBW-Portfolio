@@ -89,14 +89,30 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Video styling to match the image */
+.ergebnis > div video {
+    width: 320px; /* Matches the image width */
+    height: auto;
+    border-radius: 8px; /* Same border radius as the image */
+    object-fit: cover; /* Ensures the video content fits similarly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Matches the hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Same shadow as the image */
+}
+
+.ergebnis > div video:hover {
+    transform: scale(1.05); /* Same hover scale effect as the image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Same shadow effect on hover */
+}
+
 @media (max-width: 768px) {
     .ergebnis > div {
         flex-direction: column;
         align-items: center;
     }
 
-    .ergebnis > div img {
-        width: 90%;
+    .ergebnis > div img,
+    .ergebnis > div video {
+        width: 90%; /* Matches responsive behavior of the image */
     }
 }
 

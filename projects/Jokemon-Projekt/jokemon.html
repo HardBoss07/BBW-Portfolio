@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jokemon Projekt</title>
+    <title id="project-title">Jokemon Projekt</title>
     <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
 </head>
 <body>
 <header>
-    <h1>Jokemon Projekt</h1>
+    <h1 id="project-header">Jokemon Projekt</h1>
     <nav>
-        <a href="../projects.html">Zurück zu Projekte</a>
+        <a href="../projects.html" id="back-to-projects-link">Zurück zu Projekte</a>
+        <select id="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
     </nav>
 </header>
 <main>
     <section>
-        <h2>Über das Jokemon Projekt:</h2>
-        <p>
+        <h2 id="about-project-title">Über das Jokemon Projekt:</h2>
+        <p id="about-project-text">
             Das Jokemon Projekt ist zusammengefasst eine vereinfachte Kopie von dem Spiel Pokemon. Ich habe eine Grundlage von meinem
             Lehrer bekommen. In dieser Grundlage gab eine Basis für Attacken und den Jokemons. Ich habe diese Grundlage deutlich erweitert.
         </p>
         <ul>
             <li>
-                <h3>2D-Umgebung</h3>
-                <p>
+                <h3 id="environment-title">2D-Umgebung</h3>
+                <p id="environment-text">
                     Ich habe eine 2 dimensionale Umgebung hinzugefügt. In dieser Umgebung kann man sich frei bewegen, jedoch gibt es
                     Hindernisse wie Bäume und Flüsse, die man umgehen muss, es gibt mehrere verschiedene Regionen und eine Reihe an
                     Objekten, mit denen man interagieren kann.
                 </p>
             </li>
             <li>
-                <h3>Interagierbare Objekte</h3>
-                <p>
+                <h3 id="objects-title">Interagierbare Objekte</h3>
+                <p id="objects-text">
                     Es gibt feindliche NPCs, wilde Jokemons und Gebäude. Die feindlichen NPCs kann man zu einem Kampf herausfordern,
                     gegen die Jokemons vom NPC kämpfen und wenn man gewinnt, levelt man seine eigene Jokemons hoch. Wilde Jokemons sind
                     Jokemons, die in der Wildnis verstreut sind. Diese Jokemons kann man fangen und nachdem auch zu seinen Kämpfen
@@ -41,8 +46,8 @@
                 </p>
             </li>
             <li>
-                <h3>Auswahl von unterschiedlichen Karten</h3>
-                <p>
+                <h3 id="maps-title">Auswahl von unterschiedlichen Karten</h3>
+                <p id="maps-text">
                     Am Anfang des Spiels kann man zwischen 5 verschiedenen Karten auswählen. Diese Karten werden danach automatisch
                     geladen. Die ersten 3 Karten sind so zu sagen nur 25 auf 25 Felder gross (detailreich gestaltet) während die letzten
                     beiden Karten 50 auf 50 Felder gross sind. In diesen Karten kann man sich frei bewegen und mit den Objekten
@@ -50,16 +55,16 @@
                 </p>
             </li>
             <li>
-                <h3>Jokemons weiterentwickeln</h3>
-                <p>
+                <h3 id="evolution-title">Jokemons weiterentwickeln</h3>
+                <p id="evolution-text">
                     Im Verlauf des Spiels levelt man seine eigenen Jokemons durch Kämpfe auf und wenn man ein genug hohes Level
                     erreicht hat, kann man wie im originalem Pokémon seine Jokemons weiterentwickeln. Durch diese Weiterentwicklung
                     erhält das Jokemon mehr Attacken und ist allgemein stärker und robuster.
                 </p>
             </li>
             <li>
-                <h3>Speichern des Spielstandes</h3>
-                <p>
+                <h3 id="savegame-title">Speichern des Spielstandes</h3>
+                <p id="savegame-text">
                     Ich habe ein System entwickelt, das einem ermöglicht, seinen Spielstand zu speichern. Mit der Speicherung des
                     Spielstandes kann man ihn nach dem Neustart der Applikation und Auswahl von der gleichen Karte, laden und
                     genau dort weiter spielen, wo man davor aufgehört hat.
@@ -67,12 +72,12 @@
             </li>
         </ul>
         <div class="ergebnis">
-            <h2>Meine Ergebnisse:</h2>
-            <a class="git-btn" href="https://github.com/HardBoss07/jokemon-project">⇱ Github Repository</a>
+            <h2 id="results-title">Meine Ergebnisse:</h2>
+            <a class="git-btn" href="https://github.com/HardBoss07/jokemon-project" id="github-repo-link">⇱ Github Repository</a>
             <div>
                 <div>
-                    <h3>50 x 50 2D-Karte</h3>
-                    <p>
+                    <h3 id="map-screenshot-title">50 x 50 2D-Karte</h3>
+                    <p id="map-screenshot-text">
                         Hier habe ich ein Screenshot von der Karte 4 gemacht. Mit Hilfe von ANSI-Codes und Unicode Zeichen konnte ich
                         eine visuell ansprechende Karte designen. Im Zentrum sieht man den Spieler markiert als pinker Pfeil. Auf der
                         Karte hat es Gegner (Rotes N), wilde Jokemons (Türkieses J), Flüsse und Seen (Blaues Rechteck), nicht passierbare
@@ -84,8 +89,8 @@
             </div>
             <div>
                 <div>
-                    <h3>GameState Java-Klasse</h3>
-                    <p>
+                    <h3 id="gamestate-class-title">GameState Java-Klasse</h3>
+                    <p id="gamestate-class-text">
                         Hier habe ich einen Ausschnitt von meiner GameState Klasse. Diese Klasse speichert den aktuellen Spielstand
                         und erstellt ein Objekt, das nachdem von meinem SaveSystem verarbeitet wird und entweder den Spielstand
                         speichert oder ladet:
@@ -95,8 +100,8 @@
             </div>
             <div>
                 <div>
-                    <h3>Building Java-Klasse</h3>
-                    <p>
+                    <h3 id="building-class-title">Building Java-Klasse</h3>
+                    <p id="building-class-text">
                         Die Building Java-Klasse ist eine abstrakte Klasse. Diese Klasse ermöglich mir, die grundlegende Logik eines
                         Gebäudes zu zentralisieren, aber mit Vererbung spezialisiertere Klassen für die unterschiedlichen
                         Gebäudetypen zu erstellen:
@@ -108,7 +113,7 @@
     </section>
 </main>
 <footer>
-    <p>&copy; 2024 - Matteo Bosshard</p>
+    <p id="footer">&copy; 2025 - Matteo Bosshard</p>
 </footer>
 </body>
 </html>

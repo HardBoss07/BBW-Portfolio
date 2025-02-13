@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Taschenrechner</title>
+    <title id="calculator-title">Java Taschenrechner</title>
     <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
 </head>
 <body>
 <header>
-    <h1>Java Taschenrechner</h1>
+    <h1 id="calculator-header">Java Taschenrechner</h1>
     <nav>
-        <a href="../projects.html">Zurück zu Projekte</a>
+        <a href="../projects.html" id="back-to-projects-link">Zurück zu Projekte</a>
+        <select id="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
     </nav>
 </header>
 <main>
     <section>
-        <h2>Über den Java Taschenrechner</h2>
-        <p>
+        <h2 id="about-calculator-title">Über den Java Taschenrechner</h2>
+        <p id="about-calculator-text">
             In diesem Projekt habe ich mich mit Desktop Applikationsentwicklung beschäftigt. Ich habe das JavaFX Framework
             in Kombination von klassischem Java 23 genutzt. Ich habe davor noch keine Erfahrung mit Desktop Development in
             Java gehabt. Dieses Projekt hat mir ebenfalls stark bei dem Ausbau meiner CSS-Fähigkeiten geholfen.
         </p>
         <div class="ergebnis">
-            <h2>Meine Ergebnisse:</h2>
-            <a class="git-btn" href="https://github.com/HardBoss07/Simple-Java-Calculator">⇱ Github Repository</a>
+            <h2 id="results-title">Meine Ergebnisse:</h2>
+            <a class="git-btn" href="https://github.com/HardBoss07/Simple-Java-Calculator" id="github-repo-link">⇱ Github Repository</a>
             <div>
                 <div>
-                    <h3>Video Demonstration</h3>
-                    <p>
+                    <h3 id="video-demo-title">Video Demonstration</h3>
+                    <p id="video-demo-text">
                         Hier ist eine Video Demonstration von dem Taschenrechner, indem alle Funktionen abgebildet werden:
                     </p>
                 </div>
@@ -37,9 +42,9 @@
             </div>
             <div>
                 <div>
-                    <h3>HelloApplication Java-Klasse</h3>
-                    <p>
-                        Hier ist ein Ausschnitt von von meiner HelloApplication Klasse. Diese Klasse legt die grundlegende
+                    <h3 id="hello-class-title">HelloApplication Java-Klasse</h3>
+                    <p id="hello-class-text">
+                        Hier ist ein Ausschnitt von meiner HelloApplication Klasse. Diese Klasse legt die grundlegende
                         Elemente und das Layout des Taschenrechners fest.
                         Die restliche Klasse ist auf dem GitHub Repository vorhanden:
                     </p>
@@ -48,23 +53,23 @@
             </div>
             <div>
                 <div>
-                    <h3>Calculator Java-Klasse</h3>
-                    <p>
-                        Hier ist ein Ausschnitt von von meiner Calculator Klasse. Diese Klasse verarbeitet die gesamte
-                        Logik bezüglich der Berechnungen verarbeitet. Die restliche Klasse ist auf dem GitHub
+                    <h3 id="calculator-class-title">Calculator Java-Klasse</h3>
+                    <p id="calculator-class-text">
+                        Hier ist ein Ausschnitt von meiner Calculator Klasse. Diese Klasse verarbeitet die gesamte
+                        Logik bezüglich der Berechnungen. Die restliche Klasse ist auf dem GitHub
                         Repository vorhanden:
                     </p>
                 </div>
                 <img src="calc.png" alt="Calculator Java-Klasse">
             </div>
-            <p>Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
-            <a class="git-btn" href="https://github.com/HardBoss07/Simple-Java-Calculator/blob/master/out/artifacts/Calculator_jar/Calculator%20v02.jar">⇱ Zum Download</a>
+            <p id="more-info-text">Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
+            <a class="git-btn" href="https://github.com/HardBoss07/Simple-Java-Calculator/blob/master/out/artifacts/Calculator_jar/Calculator%20v02.jar" id="download-link">⇱ Zum Download</a>
         </div>
 
     </section>
 </main>
 <footer>
-    <p>&copy; 2024 - Matteo Bosshard</p>
+    <p id="footer">&copy; 2025 - Matteo Bosshard</p>
 </footer>
 </body>
 </html>
