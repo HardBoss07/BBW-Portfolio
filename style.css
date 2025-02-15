@@ -211,3 +211,76 @@ footer a:hover {
     background: linear-gradient(90deg, #2575fc, #6a11cb);
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        margin: 0 1rem;
+    }
+
+    main {
+        max-width: 95%;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .ergebnis > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ergebnis > div img,
+    .ergebnis > div video {
+        width: 100%;
+    }
+
+    .git-btn {
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .karten-container {
+        gap: 10px;
+    }
+
+    .karte {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+
+    .git-btn {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+
+    .karte {
+        max-width: 150px;
+    }
+
+    .karte h3 {
+        font-size: 1rem;
+    }
+
+    .karte a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
