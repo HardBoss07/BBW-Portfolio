@@ -10,8 +10,6 @@ body {
     color: #2b2b2b;
     line-height: 1.7;
     background: linear-gradient(135deg, #f0f8ff, #dfe7fd);
-    margin: 0;
-    padding: 0;
 }
 
 /* Header styling */
@@ -52,6 +50,14 @@ main {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+}
+
 .ergebnis {
     display: flex;
     flex-direction: column;
@@ -76,57 +82,27 @@ main {
     gap: 1.5rem;
 }
 
-.ergebnis > div img {
+.ergebnis > div img,
+.ergebnis > div video {
     width: 320px;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
-.ergebnis > div img:hover {
+.ergebnis > div img:hover,
+.ergebnis > div video:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Video styling to match the image */
-.ergebnis > div video {
-    width: 320px; /* Matches the image width */
-    height: auto;
-    border-radius: 8px; /* Same border radius as the image */
-    object-fit: cover; /* Ensures the video content fits similarly */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Matches the hover effects */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Same shadow as the image */
-}
-
-.ergebnis > div video:hover {
-    transform: scale(1.05); /* Same hover scale effect as the image */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Same shadow effect on hover */
-}
-
-@media (max-width: 768px) {
-    .ergebnis > div {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .ergebnis > div img,
-    .ergebnis > div video {
-        width: 90%; /* Matches responsive behavior of the image */
-    }
-}
-
-.intro {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #333;
-}
-
 .git-btn {
     text-align: center;
-    background: linear-gradient(90deg, #fc25ee ,#7425fc);
+    background: linear-gradient(90deg, #fc25ee, #7425fc);
     padding: 1rem 0;
     border-radius: 12px;
     color: #fff;
@@ -212,6 +188,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -235,6 +212,7 @@ footer a:hover {
     .ergebnis > div img,
     .ergebnis > div video {
         width: 100%;
+        margin-left: 0;
     }
 
     .git-btn {
