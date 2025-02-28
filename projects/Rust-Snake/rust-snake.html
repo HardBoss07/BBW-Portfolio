@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rust Snake</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+  <h1>Rust Snake</h1>
+  <nav>
+    <a href="../projects.html">Zurück zu Projekte</a>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>Über das Rust Snake:</h2>
+    <p>
+      Dieses Projekt habe ich erstellt um die moderne Programmiersprache Rust zu lernen. Ich habe dazu das ikonische Spiel Snake nachprogrmamiert. Ich habe hier die Grundlagen in Rust gelernt. Ich verwende eine simple Graphics-Libary um ein visuellen Output zu haben anstatt nur eine Konsolen-Applikation.
+    </p>
+    <div class="ergebnis">
+      <h2>Meine Ergebnisse:</h2>
+      <a class="git-btn" href="https://github.com/HardBoss07/rust-snake" target="_blank">⇱ Github Repository</a>
+      <div>
+        <div>
+          <h3 id="video-demo-title">Video Demonstration</h3>
+          <p id="video-demo-text">
+            Hier ist eine Video Demonstration von dem Rust Snake:
+          </p>
+        </div>
+        <video width="320" height="180" controls>
+          <source src="vid.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div>
+          <h3>Game Struct</h3>
+          <p>
+            Hier habe ich ein Game Struct mit einer new() Funktion erstellt. Dieses Struct ist das primäre Objekt wo die gesamte Logik des Spiels beinhaltet. Mit der new() Funktion kann man ein neues Spiel-Fenster starten, wird jedoch nur bei der erstmaligen Initialisierung verwendet:
+          </p>
+        </div>
+        <img src="game.png" alt="game struct source code">
+      </div>
+      <div>
+        <div>
+          <h3>Die Game::run() Funktion</h3>
+          <p>
+            Hier ist die Funktion run(). Diese Funktion kümmert sich um den gesamten Spielverlauf. Zunächst überprüft die Funktion ob der Spieler die Leertaste drückt währen das Spiel noch nicht gestartet hat. Wenn dies passiert wird das Spiel initialisiert und geht nun zum nächsten If-Statement weiter. In diesem If-Statement wird zunächst mal die Eingaben vom Spieler ausgewertet, danach die nächste Position berechnet, danach wird überprüft ob man einen Cookie eingesammelt hat zum Wachsen, und zu Ende wird der Buffer geupdated um die nächste Position darzustellen. Wenn man das Spiel verliert indem man in eine Wand oder in sich selber hineingeht wird eine neue Snake mit Snake::new() erstellt. Man kann das Spiel jederzeit mit der Escape Taste beenden:
+          </p>
+        </div>
+        <img src="run.png" alt="run Funktion source code">
+      </div>
+      <div>
+        <div>
+          <h3>Snake Struct</h3>
+          <p>
+            Hier habe ich ein komplexen Datentyp, ein Struct, erstellt, der die Daten bezüglich der Snake speichert. Dazu habe ich eine Funktion new() erstellt, die man aufrufen kann, um eine neue Snake zu erstellen, ähnlich wie ein Constructor in einem Java-Programm:
+          </p>
+        </div>
+        <img src="snake-struct.png" alt="Snake struct source code">
+      </div>
+      <p>Für weitere Informationen und dem gesamten Source-Code besuche mein GitHub Repository!</p>
+      <a class="git-btn" href="https://github.com/HardBoss07/rust-snake/blob/master/rust-snake.rar" id="download-link" target="_blank">⇱ Zum Download</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2025 - Matteo Bosshard</p>
+</footer>
+</body>
+</html>
